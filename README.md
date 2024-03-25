@@ -22,6 +22,6 @@ If you use this repo, please cite as:"
 @inproceedings{magistri2024icra,
 author = {F. Magistri and R. Marcuzzi and E.A. Marks and M. Sodano and J. Behley and C. Stachniss},
 title = {{Efficient and Accurate Transformer-Based 3D Shape Completion and Reconstruction of Fruits for Agricultural Robots}},
-booktitle = icra,
+booktitle = {Proc.~of the IEEE Intl.~Conf.~on Robotics \& Automation (ICRA)}, 
 year = 2024,
 }
