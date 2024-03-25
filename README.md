@@ -2,7 +2,7 @@
 
 ## Source code coming soon, stay tuned!
 
-This repo will contain the code for the fruit completion and reconstruction method proposed in our ICRA'24 paper that you can find at this [link](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/magistri2024icra.pdf)
+This repo will contain the code for the fruit completion and reconstruction method proposed in our ICRA'24 paper that you can find at this [link](https://www.ipb.uni-bonn.de/pdfs/magistri2024icra.pdf)
 
 ![](pics/teaser.png)
 
