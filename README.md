@@ -21,7 +21,7 @@ of fruits when only a partial point cloud is available
 
 ## How to Run
 
-A sample dataset can be found here, update the paths in the config file `tcore/config/model.yaml`
+A sample dataset can be found [here](https://www.ipb.uni-bonn.de/html/projects/Pheno4D/Pheno4D.zip), update the paths in the config file `tcore/config/model.yaml`
 
 **Train**  
 `python tcore/scripts/train_model.py`
