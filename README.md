@@ -14,11 +14,26 @@ such features into vertex features and feed them to a transformer decoder that i
 an architecture allows us to estimate the complete 3D shape
 of fruits when only a partial point cloud is available
 
+## How to Install
+
+`pip3 install -r requirements.txt`
+`pip3 install -U -e .`
+
+## How to Run
+
+A sample dataset can be found here, update the paths in the config file `tcore/config/model.yaml`
+
+**Train**  
+`python tcore/scripts/train_model.py`
+
+**Test**  
+`python tcore/scripts/evaluate_model.py --w <path-to-checkpoint>`  
+
 ## How to Cite
 
 If you use this repo, please cite as:"
 
-```bibtex 
+```bibtex  
 @inproceedings{magistri2024icra,
 author = {F. Magistri and R. Marcuzzi and E.A. Marks and M. Sodano and J. Behley and C. Stachniss},
 title = {{Efficient and Accurate Transformer-Based 3D Shape Completion and Reconstruction of Fruits for Agricultural Robots}},
