@@ -1,5 +1,5 @@
 LOGDIR: ''
-PATH: '/'
+PATH: ''
 
 EXPERIMENT:
     ID: tcore
