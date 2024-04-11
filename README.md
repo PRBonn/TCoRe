@@ -1,7 +1,5 @@
 # Efficient and Accurate Transformer-Based 3D Shape Completion and Reconstruction of Fruits for Agricultural Robots
 
-## Source code coming soon, stay tuned!
-
 This repo will contain the code for the fruit completion and reconstruction method proposed in our ICRA'24 paper that you can find at this [link](https://www.ipb.uni-bonn.de/pdfs/magistri2024icra.pdf)
 
 ![](pics/teaser.png)
@@ -21,7 +19,7 @@ of fruits when only a partial point cloud is available
 
 ## How to Run
 
-A sample dataset can be found [here](https://www.ipb.uni-bonn.de/html/projects/Pheno4D/Pheno4D.zip), update the paths in the config file `tcore/config/model.yaml`
+A sample dataset can be found [here](https://www.ipb.uni-bonn.de/html/projects/shape_completion/igg_fruit.zip), update the paths in the config file `tcore/config/model.yaml`
 
 **Train**  
 `python tcore/scripts/train_model.py`
@@ -31,7 +29,7 @@ A sample dataset can be found [here](https://www.ipb.uni-bonn.de/html/projects/P
 
 ## How to Cite
 
-If you use this repo, please cite as:"
+If you use this repo, please cite as:
 
 ```bibtex  
 @inproceedings{magistri2024icra,
