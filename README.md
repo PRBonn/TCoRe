@@ -16,7 +16,7 @@ of fruits when only a partial point cloud is available
 
 ## How to Install
 
-`pip3 install -r requirements.txt` <\br>
+`pip3 install -r requirements.txt` <br>
 `pip3 install -U -e .`
 
 ## How to Run
