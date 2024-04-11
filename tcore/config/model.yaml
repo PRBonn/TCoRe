@@ -1,5 +1,5 @@
-LOGDIR: '/home/federico/Projects/transformer_completion/T-CoRe/results/'
-PATH: '/media/federico/federico_hdd/shape_completion/SweetPepper/SweetPepper'
+LOGDIR: ''
+PATH: '/'
 
 EXPERIMENT:
     ID: tcore
