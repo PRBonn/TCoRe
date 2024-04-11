@@ -1,0 +1,34 @@
+LOGDIR: '/home/federico/Projects/transformer_completion/T-CoRe/results/'
+PATH: '/media/federico/federico_hdd/shape_completion/SweetPepper/SweetPepper'
+
+EXPERIMENT:
+    ID: tcore
+
+TRAIN:
+    AUG: true
+    BATCH_ACC: 4
+    BATCH_SIZE: 2
+    DECAY: 0.95
+    FREEZE_MODULES: []
+    LR: 0.0001
+    MAX_EPOCH: 500
+    NUM_WORKERS: 6
+    N_GPUS: -1
+    STEP: 50
+
+MODEL:    
+    DATASET: FRUITS
+    OVERFIT: False
+    FRUIT: SWEETPEPPER
+    SMOOTH_SW: 1
+    SMOOTH_ST: 10
+
+LOSS:
+    WEIGHTS_REG_LAP: 0.1
+    WEIGHTS_REG_NOR: 0.1
+    WEIGHTS_CD: 1000000
+
+FRUITS:
+    TEMPLATE_DIM: 3
+    SENSOR: 'realsense'
+    AUGMENTATION: False

@@ -1,0 +1,10 @@
+__pycache__
+tcore.egg-info
+*.pth
+**vscode/
+build/
+dist/
+tcore.egg-info/
+*.png
+**results/
+*.json

@@ -1,0 +1,10 @@
+BACKBONE:
+    DIMENSION: 3 # 3D pts
+    CR: 2 # channel ratio, change feature dimensions
+    CHANNELS: [32, 32, 64, 128, 256, 256, 128, 96, 96]
+    RESOLUTION: 0.0005
+    INTERPOLATE: True # feature interpolation
+    KNN_UP: 3
+    FEAT_KEY: normals #dict key to acces features
+    INPUT_DIM: 6 
+

@@ -1,0 +1,15 @@
+Click==7.0
+easydict==1.9
+ipdb==0.13.9
+matplotlib==3.5.1
+MinkowskiEngine==0.5.4
+ninja
+pykeops
+numpy==1.21.4
+open3d==0.15.1+76b494ef5
+pytorch_lightning==1.5.9
+PyYAML==6.0
+scikit_learn==1.0.2
+scipy==1.7.3
+torch==1.10.1+cu113
+tqdm==4.62.3
