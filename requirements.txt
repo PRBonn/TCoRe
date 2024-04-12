@@ -2,7 +2,6 @@ Click==7.0
 easydict==1.9
 ipdb==0.13.9
 matplotlib==3.5.1
-MinkowskiEngine==0.5.4
 ninja
 pykeops
 numpy==1.21.4

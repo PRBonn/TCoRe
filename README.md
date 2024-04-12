@@ -14,7 +14,18 @@ of fruits when only a partial point cloud is available
 
 ## How to Install
 
-`pip3 install -r requirements.txt` <br>
+
+Installing python packages pre-requisites:
+
+`sudo apt install build-essential python3-dev libopenblas-dev`
+`pip3 install -r requirements.txt`
+
+Installing MinkowskiEngine:
+
+`pip3 install -U MinkowskiEngine==0.5.4 --install-option="--blas=openblas" -v --no-deps`
+
+To setup the code run the following command on the code main directory:
+
 `pip3 install -U -e .`
 
 ## How to Run
