@@ -17,7 +17,7 @@ of fruits when only a partial point cloud is available
 
 Installing python packages pre-requisites:
 
-`sudo apt install build-essential python3-dev libopenblas-dev`
+`sudo apt install build-essential python3-dev libopenblas-dev` <br>
 `pip3 install -r requirements.txt`
 
 Installing MinkowskiEngine:
