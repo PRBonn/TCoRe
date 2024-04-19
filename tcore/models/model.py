@@ -189,11 +189,6 @@ class TCoRe(LightningModule):
 
                 print("final prediction")
                 o3d.visualization.draw_geometries(
-                    [final_prediction_lineset, in_pcd],
-                    mesh_show_back_face=True,
-                    mesh_show_wireframe=True,
-                )
-                o3d.visualization.draw_geometries(
                     [pt_mesh, in_pcd],
                     mesh_show_back_face=True,
                     mesh_show_wireframe=True,

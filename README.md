@@ -30,7 +30,15 @@ To setup the code run the following command on the code main directory:
 
 ## How to Run
 
-A sample dataset can be found [here](https://www.ipb.uni-bonn.de/html/projects/shape_completion/igg_fruit.zip), unzip it and update the paths in the config file `tcore/config/model.yaml`
+We prepare a small sample dataset (~1.5GB) that you can run with:
+
+`sh ./scripts/download_data.sh`
+
+You cana also download one of our pretrained models by running:
+`sh ./scripts/download_checkpoint.sh`
+
+These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. Afterward, you can run a simple demo:
+`python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
 
 **Train**  
 `python tcore/scripts/train_model.py`

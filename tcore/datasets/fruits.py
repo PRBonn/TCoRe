@@ -12,6 +12,7 @@ class IGGFruit(Dataset):
                  data_source=None,
                  split='train',
                  sensor='realsense',
+                 overfit=False,
                  precomputed_augmentation=False):
         super().__init__()
 
@@ -20,6 +21,7 @@ class IGGFruit(Dataset):
         self.data_source = data_source
         self.sensor = sensor
         self.split = split
+        self.overfit = overfit
 
         with open(self.data_source + '/split.json', 'r') as file:
             self.splits = json.load(file)
@@ -36,10 +38,7 @@ class IGGFruit(Dataset):
         aug_data_source = self.data_source + self.precomputed_augmentation
         for fid in self.splits[self.split]:
             for aug_idx in range(10):
-                if self.split == 'train' and self.fruit == 'SweetPepper':
-                    aug_list.append(os.path.join(aug_data_source, fid + '_0' + str(aug_idx), 'laser/fruit_cut.ply'))
-                else:
-                    aug_list.append(os.path.join(aug_data_source, fid + '_0' + str(aug_idx), 'laser/fruit.ply'))
+                aug_list.append(os.path.join(aug_data_source, fid + '_0' + str(aug_idx), 'laser/fruit.ply'))
         return aug_list
 
     def get_file_paths(self):
@@ -63,10 +62,7 @@ class IGGFruit(Dataset):
                     fruit_list.append(fragment_dict)
 
             else:
-                if self.split == 'train' and self.fruit == 'SweetPepper':
-                    fruit_list.append(os.path.join(self.data_source, fid, 'laser/fruit_cut.ply'))
-                else:
-                    fruit_list.append(os.path.join(self.data_source, fid, 'laser/fruit.ply'))
+                fruit_list.append(os.path.join(self.data_source, fid, 'laser/fruit.ply'))
 
         return fruit_list
 
@@ -94,10 +90,7 @@ class IGGFruit(Dataset):
         return paths
 
     def get_gt_pcd(self, fruit_id):
-        if self.split == 'train' and self.fruit == 'SweetPepper':
-            return o3d.io.read_point_cloud(fruit_id + 'laser/fruit_cut.ply')
-        else:
-            return o3d.io.read_point_cloud(fruit_id + 'laser/fruit.ply')
+        return o3d.io.read_point_cloud(fruit_id + 'laser/fruit.ply')
 
     @staticmethod
     def pcd_from_rgbd(rgb, d, pose, K):
@@ -158,6 +151,8 @@ class IGGFruit(Dataset):
         return item
 
     def __len__(self):
+        if self.overfit:
+            return 1
         return len(self.fruit_list)
 
     def __getitem__(self, index):
@@ -196,16 +191,20 @@ class IGGFruitDatasetModule(LightningDataModule):
             data_source=cfg.PATH,
             split='train',
             sensor=self.cfg[self.cfg.MODEL.DATASET].SENSOR,
-            precomputed_augmentation=precomputed_aug)
+            precomputed_augmentation=precomputed_aug,
+            overfit = self.cfg.MODEL.OVERFIT
+            )
         self.test_dataset = IGGFruit(
             data_source=cfg.PATH,
             split='train' if self.cfg.MODEL.OVERFIT else 'test',
-            sensor=self.cfg[self.cfg.MODEL.DATASET].SENSOR
+            sensor=self.cfg[self.cfg.MODEL.DATASET].SENSOR,
+            overfit = self.cfg.MODEL.OVERFIT
             )
         self.val_dataset = IGGFruit(
             data_source=cfg.PATH,
             split='train' if self.cfg.MODEL.OVERFIT else 'val',
-            sensor=self.cfg[self.cfg.MODEL.DATASET].SENSOR
+            sensor=self.cfg[self.cfg.MODEL.DATASET].SENSOR,
+            overfit = self.cfg.MODEL.OVERFIT
             )
 
     def train_dataloader(self):

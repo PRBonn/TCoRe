@@ -1,13 +1,13 @@
 LOGDIR: ''
-PATH: ''
+PATH: './data/igg_fruit/'
 
 EXPERIMENT:
     ID: tcore
 
 TRAIN:
     AUG: true
-    BATCH_ACC: 4
-    BATCH_SIZE: 2
+    BATCH_ACC: 1
+    BATCH_SIZE: 1
     DECAY: 0.95
     FREEZE_MODULES: []
     LR: 0.0001

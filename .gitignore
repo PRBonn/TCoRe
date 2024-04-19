@@ -8,3 +8,5 @@ tcore.egg-info/
 *.png
 **results/
 *.json
+data/
+checkpoints/
