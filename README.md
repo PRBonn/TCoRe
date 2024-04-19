@@ -38,6 +38,24 @@ A sample dataset can be found [here](https://www.ipb.uni-bonn.de/html/projects/s
 **Test**    
 `python tcore/scripts/evaluate_model.py --w <path-to-checkpoint>`  
 
+## Running our Approach on Sample Data
+
+For running the demo of our approach, we assume that you are using Ubunut 22.04 with a CUDA-capable device, but the scripts can be adapted to other platforms.
+We assume that you are in the root directory of the repository.
+
+1. Download and extract the sample data: `sh script/dowload_data.sh`
+2. Download the checkpoint of our trained model: `sh script/download_checkpoint.sh`
+3. Run the inference on the data: `python3 tcore/scripts/evaluate_model.py --w  checkpoints/sweetpepper_pretrained.ckpt`
+
+(TODO: add actual commands.)
+If you have the Nvidia Container Toolkit installed (see [Setup instructions]()), you can also run the demo as follows:
+
+3. Run our Docker image: `sudo docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/data:/t-core/data -v $(pwd)/checkpoints:/t-core/checkpoints prbonn/t-core python3 tcore/scripts/evaluate_model.py --w  checkpoints/sweetpepper_pretrained.ckpt`
+
+## Building the Docker image
+
+You can build the Docker image locally via `docker build . -t prbonn/t-core:latest`.
+
 ## How to Cite
 
 If you use this repo, please cite as:
