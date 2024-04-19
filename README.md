@@ -46,7 +46,7 @@ We assume that you are in the root directory of the repository. We prepare a sma
 
 These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. 
 
-1. Run the inference on the data: `python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
+3. Run the inference on the data: `python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
 
 (TODO: add actual commands.)
 If you have the Nvidia Container Toolkit installed (see [Setup instructions]()), you can also run the demo as follows:
