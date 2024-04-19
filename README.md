@@ -30,16 +30,6 @@ To setup the code run the following command on the code main directory:
 
 ## How to Run
 
-We prepare a small sample dataset (~1.5GB) that you can run with:
-
-`sh ./scripts/download_data.sh`
-
-You cana also download one of our pretrained models by running:
-`sh ./scripts/download_checkpoint.sh`
-
-These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. Afterward, you can run a simple demo:
-`python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
-
 **Train**  
 `python tcore/scripts/train_model.py`
 
@@ -49,16 +39,19 @@ These commands will download the dataset and the checkpoint in `./data/` and `./
 ## Running our Approach on Sample Data
 
 For running the demo of our approach, we assume that you are using Ubunut 22.04 with a CUDA-capable device, but the scripts can be adapted to other platforms.
-We assume that you are in the root directory of the repository.
+We assume that you are in the root directory of the repository. We prepare a small sample dataset (~1.5GB) for testing this repo.
 
 1. Download and extract the sample data: `sh script/dowload_data.sh`
 2. Download the checkpoint of our trained model: `sh script/download_checkpoint.sh`
-3. Run the inference on the data: `python3 tcore/scripts/evaluate_model.py --w  checkpoints/sweetpepper_pretrained.ckpt`
+
+These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. 
+
+1. Run the inference on the data: `python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
 
 (TODO: add actual commands.)
 If you have the Nvidia Container Toolkit installed (see [Setup instructions]()), you can also run the demo as follows:
 
-3. Run our Docker image: `sudo docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/data:/t-core/data -v $(pwd)/checkpoints:/t-core/checkpoints prbonn/t-core python3 tcore/scripts/evaluate_model.py --w  checkpoints/sweetpepper_pretrained.ckpt`
+3. Run our Docker image: `sudo docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/data:/t-core/data -v $(pwd)/checkpoints:/t-core/checkpoints prbonn/t-core python3 tcore/scripts/evaluate_model.py --w  checkpoints/pretrained_model.ckpt`
 
 ## Building the Docker image
 
