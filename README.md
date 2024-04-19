@@ -15,7 +15,7 @@ of fruits when only a partial point cloud is available
 ## How to Install
 
 
-For compatibility reasons, we reccomend creating a conda environement with python 3.9:
+For compatibility reasons, we reccomend creating a conda environement with python 3.9:  <br>
 `conda create --name tcore python=3.9 && conda activate tcore`
 
 Installing python packages pre-requisites:
@@ -25,7 +25,7 @@ Installing python packages pre-requisites:
 
 Installing MinkowskiEngine:
 
-`pip3 install -U MinkowskiEngine==0.5.4 --install-option="--blas=openblas" -v --no-deps`
+`pip3 install -U MinkowskiEngine==0.5.4 --install-option="--blas=openblas" -v --no-deps`  <br>
 NB: At the moment, MinkowskiEngine is not comaptible with python 3.10 see this [issue](https://github.com/NVIDIA/MinkowskiEngine/issues/526#issuecomment-1855119728)
 
 To setup the code run the following command on the code main directory:
