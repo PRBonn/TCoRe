@@ -45,8 +45,8 @@ To setup the code run the following command on the code main directory:
 For running the demo of our approach, we assume that you are using Ubunut 22.04 with a CUDA-capable device, but the scripts can be adapted to other platforms.
 We assume that you are in the root directory of the repository. We prepare a small sample dataset (~1.5GB) for testing this repo.
 
-1. Download and extract the sample data: `sh script/dowload_data.sh`
-2. Download the checkpoint of our trained model: `sh script/download_checkpoint.sh`
+1. Download and extract the sample data: `sh scripts/download_data.sh`
+2. Download the checkpoint of our trained model: `sh scripts/download_checkpoint.sh`
 
 These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. 
 
