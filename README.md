@@ -14,8 +14,9 @@ of fruits when only a partial point cloud is available
 
 ## How to Install
 
+We tested our code on a system with Ubuntu 22.04 and CUDA 11.8.
 
-For compatibility reasons, we reccomend creating a conda environement with python 3.9:  <br>
+For compatibility reasons, we reccomend creating a conda environement with Python 3.9:  <br>
 `conda create --name tcore python=3.9 && conda activate tcore`
 
 Installing python packages pre-requisites:
@@ -25,8 +26,12 @@ Installing python packages pre-requisites:
 
 Installing MinkowskiEngine:
 
-`pip3 install -U MinkowskiEngine==0.5.4 --install-option="--blas=openblas" -v --no-deps`  <br>
-NB: At the moment, MinkowskiEngine is not comaptible with python 3.10 see this [issue](https://github.com/NVIDIA/MinkowskiEngine/issues/526#issuecomment-1855119728)
+`pip3 install -U git+https://github.com/NVIDIA/MinkowskiEngine -v --no-deps`  <br>
+NB: At the moment, MinkowskiEngine is not comaptible with python 3.10+, see this [issue](https://github.com/NVIDIA/MinkowskiEngine/issues/526#issuecomment-1855119728)
+
+Install Pytorch3D:
+
+`pip3 install "git+https://github.com/facebookresearch/pytorch3d.git`
 
 To setup the code run the following command on the code main directory:
 
@@ -51,15 +56,6 @@ We assume that you are in the root directory of the repository. We prepare a sma
 These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. 
 
 3. Run the inference on the data: `python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
-
-(TODO: add actual commands.)
-If you have the Nvidia Container Toolkit installed (see [Setup instructions]()), you can also run the demo as follows:
-
-3. Run our Docker image: `sudo docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd)/data:/t-core/data -v $(pwd)/checkpoints:/t-core/checkpoints prbonn/t-core python3 tcore/scripts/evaluate_model.py --w  checkpoints/pretrained_model.ckpt`
-
-## Building the Docker image
-
-You can build the Docker image locally via `docker build . -t prbonn/t-core:latest`.
 
 ## How to Cite
 
