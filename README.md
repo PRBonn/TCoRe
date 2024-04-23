@@ -15,6 +15,9 @@ of fruits when only a partial point cloud is available
 ## How to Install
 
 
+For compatibility reasons, we reccomend creating a conda environement with python 3.9:  <br>
+`conda create --name tcore python=3.9 && conda activate tcore`
+
 Installing python packages pre-requisites:
 
 `sudo apt install build-essential python3-dev libopenblas-dev` <br>
@@ -22,7 +25,8 @@ Installing python packages pre-requisites:
 
 Installing MinkowskiEngine:
 
-`pip3 install -U MinkowskiEngine==0.5.4 --install-option="--blas=openblas" -v --no-deps`
+`pip3 install -U MinkowskiEngine==0.5.4 --install-option="--blas=openblas" -v --no-deps`  <br>
+NB: At the moment, MinkowskiEngine is not comaptible with python 3.10 see this [issue](https://github.com/NVIDIA/MinkowskiEngine/issues/526#issuecomment-1855119728)
 
 To setup the code run the following command on the code main directory:
 
@@ -41,8 +45,8 @@ To setup the code run the following command on the code main directory:
 For running the demo of our approach, we assume that you are using Ubunut 22.04 with a CUDA-capable device, but the scripts can be adapted to other platforms.
 We assume that you are in the root directory of the repository. We prepare a small sample dataset (~1.5GB) for testing this repo.
 
-1. Download and extract the sample data: `sh script/dowload_data.sh`
-2. Download the checkpoint of our trained model: `sh script/download_checkpoint.sh`
+1. Download and extract the sample data: `sh scripts/download_data.sh`
+2. Download the checkpoint of our trained model: `sh scripts/download_checkpoint.sh`
 
 These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. 
 
