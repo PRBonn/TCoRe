@@ -58,7 +58,7 @@ These commands will download the dataset and the checkpoint in `./data/` and `./
 3. Run the inference on the data: `python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
 
 You should get the following image on your machine:
-[](pics/demo.png)
+![](pics/demo.png)
 
 ## How to Cite
 
