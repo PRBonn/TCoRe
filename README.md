@@ -13,7 +13,8 @@ an architecture allows us to estimate the complete 3D shape
 of fruits when only a partial point cloud is available
 
 ## How to Install
-
+<details>
+  <summary>[Details (click to expand)]</summary>
 We tested our code on a system with Ubuntu 22.04 and CUDA 11.8.
 
 For compatibility reasons, we reccomend creating a conda environement with Python 3.9:  <br>
@@ -36,17 +37,20 @@ Install Pytorch3D:
 To setup the code run the following command on the code main directory:
 
 `pip3 install -U -e .`
+</details>
 
 ## How to Run
+<details>
+  <summary>[Details (click to expand)]</summary>
 
 **Train**  
 `python tcore/scripts/train_model.py`
 
 **Test**    
 `python tcore/scripts/evaluate_model.py --w <path-to-checkpoint>`  
+</details>
 
 ## Running our Approach on Sample Data
-
 <details>
   <summary>[Details (click to expand)]</summary>
 
@@ -62,7 +66,6 @@ These commands will download the dataset and the checkpoint in `./data/` and `./
 
 You should get the following image on your machine:
 ![](pics/demo.png)
-
 </details>
 
 ## How to Cite
