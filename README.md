@@ -32,9 +32,9 @@ NB: At the moment, MinkowskiEngine is not comaptible with python 3.10+, see this
 
 Install Pytorch3D:
 
-`pip3 install "git+https://github.com/facebookresearch/pytorch3d.git`
+`pip3 install "git+https://github.com/facebookresearch/pytorch3d.git"`
 
-To setup the code run the following command on the code main directory:
+To setup the code run the following command on the code root directory:
 
 `pip3 install -U -e .`
 </details>
@@ -43,11 +43,17 @@ To setup the code run the following command on the code main directory:
 <details>
   <summary>[Details (click to expand)]</summary>
 
-**Train**  
-`python tcore/scripts/train_model.py`
+**Train**
 
-**Test**    
-`python tcore/scripts/evaluate_model.py --w <path-to-checkpoint>`  
+Run `python tcore/scripts/train_model.py` to train our approach, where parameters are specified in the config `tcore/config/model.yaml`.
+
+You can use `--model_cfg_path <path-to-cfg>` to specify a different configuration file.
+
+**Test**
+
+Run `python tcore/scripts/evaluate_model.py --w <path-to-checkpoint>` for inference and computing metrics with the directory specified in `tcore/config/model.yaml`.
+
+You can use `--model_cfg_path <path-to-cfg>` to specify a different configuration file.
 </details>
 
 ## Running our Approach on Sample Data
@@ -60,7 +66,7 @@ We assume that you are in the root directory of the repository. We prepare a sma
 1. Download and extract the sample data: `sh scripts/download_data.sh`
 2. Download the checkpoint of our trained model: `sh scripts/download_checkpoint.sh`
 
-These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints` respectively. 
+These commands will download the dataset and the checkpoint in `./data/` and `./checkpoints`, respectively. 
 
 3. Run the inference on the data: `python tcore/scripts/demo.py --w  checkpoints/pretrained_model.ckpt`
 

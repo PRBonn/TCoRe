@@ -16,13 +16,13 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 RUN conda init && . ~/.bashrc # '.' used instead of 'source' to load commands from .bashrc 
 
-
-
-# RUN conda create --name tcore python=3.9 && conda activate
+RUN conda create --name tcore python=3.9 && conda activate
 
 # Make RUN commands use the new environment:
-# SHELL ["conda", "run", "-n", "tcore", "/bin/bash", "-c"] ## only needed inside docker.
+SHELL ["conda", "run", "-n", "tcore", "/bin/bash", "-c"] ## only needed inside docker.
 
-# RUN pip3 install -r requirements.txt
-# RUN pip3 install "git+https://github.com/facebookresearch/pytorch3d.git
-# RUN pip3 install -U -e .
+RUN pip3 install pip==23.0.0
+RUN pip3 install -r requirements.txt
+RUN pip3 install -U git+https://github.com/NVIDIA/MinkowskiEngine -v --no-deps --install-options="--force-cuda"
+RUN pip3 install "git+https://github.com/facebookresearch/pytorch3d.git"
+RUN pip3 install -U -e .
