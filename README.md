@@ -47,6 +47,9 @@ To setup the code run the following command on the code main directory:
 
 ## Running our Approach on Sample Data
 
+<details>
+  <summary>[Details (click to expand)]</summary>
+
 For running the demo of our approach, we assume that you are using Ubunut 22.04 with a CUDA-capable device, but the scripts can be adapted to other platforms.
 We assume that you are in the root directory of the repository. We prepare a small sample dataset (~1.5GB) for testing this repo.
 
@@ -60,6 +63,8 @@ These commands will download the dataset and the checkpoint in `./data/` and `./
 You should get the following image on your machine:
 ![](pics/demo.png)
 
+</details>
+
 ## How to Cite
 
 If you use this repo, please cite as:
@@ -71,3 +76,4 @@ title = {{Efficient and Accurate Transformer-Based 3D Shape Completion and Recon
 booktitle = {Proc.~of the IEEE Intl.~Conf.~on Robotics \& Automation (ICRA)}, 
 year = 2024,
 }
+
