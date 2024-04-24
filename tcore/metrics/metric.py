@@ -2,7 +2,7 @@ import open3d as o3d
 import torch
 import numpy as np
 
-from metrics_3d import MESHTYPE, TETRATYPE, PCDTYPE
+from tcore.metrics import MESHTYPE, TETRATYPE, PCDTYPE
 
 
 class Metrics3D():
