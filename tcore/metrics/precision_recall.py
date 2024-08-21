@@ -63,10 +63,11 @@ class PrecisionRecall(Metrics3D):
 
     def compute_auc(self):
         dx = self.thresholds[1] - self.thresholds[0]
-        perfect_predictor = scipy.integrate.simpson(np.ones_like(self.thresholds), dx=dx)
+        perfect_predictor = scipy.integrate.simpson(np.ones_like(self.thresholds)*100, dx=dx)
 
         pr, re, f1 = self.compute_at_all_thresholds()
 
+        # import ipdb;ipdb.set_trace()
         pr_area = scipy.integrate.simpson(pr, dx=dx)
         norm_pr_area = pr_area / perfect_predictor
 
