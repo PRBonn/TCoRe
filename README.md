@@ -17,7 +17,7 @@ of fruits when only a partial point cloud is available
   <summary>[Details (click to expand)]</summary>
 We tested our code on a system with Ubuntu 22.04 and CUDA 11.8.
 
-For compatibility reasons, we reccomend creating a conda environement with Python 3.9:  <br>
+For compatibility reasons, we recommend creating a conda environment with Python 3.9:  <br>
 `conda create --name tcore python=3.9 && conda activate tcore`
 
 Installing python packages pre-requisites:
@@ -28,7 +28,7 @@ Installing python packages pre-requisites:
 Installing MinkowskiEngine:
 
 `pip3 install -U git+https://github.com/NVIDIA/MinkowskiEngine -v --no-deps`  <br>
-NB: At the moment, MinkowskiEngine is not comaptible with python 3.10+, see this [issue](https://github.com/NVIDIA/MinkowskiEngine/issues/526#issuecomment-1855119728)
+NB: At the moment, MinkowskiEngine is not compatible with python 3.10+, see this [issue](https://github.com/NVIDIA/MinkowskiEngine/issues/526#issuecomment-1855119728)
 
 Install Pytorch3D:
 
@@ -60,7 +60,7 @@ You can use `--model_cfg_path <path-to-cfg>` to specify a different configuratio
 <details>
   <summary>[Details (click to expand)]</summary>
 
-For running the demo of our approach, we assume that you are using Ubunut 22.04 with a CUDA-capable device, but the scripts can be adapted to other platforms.
+For running the demo of our approach, we assume that you are using Ubuntu 22.04 with a CUDA-capable device, but the scripts can be adapted to other platforms.
 We assume that you are in the root directory of the repository. We prepare a small sample dataset for testing this repo.
 
 1. Download and extract the sample data: `sh scripts/download_data.sh`
